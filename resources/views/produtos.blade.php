@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -67,7 +66,8 @@
     <div class="container">
         <h2>Adicionar Novo Produto</h2>
         <form action="{{ route('produtos.store') }}" method="POST">
-            @csrf <input type="text" name="nome" placeholder="Nome do Produto" required>
+            @csrf 
+            <input type="text" name="nome" placeholder="Nome do Produto" required>
             <textarea name="descricao" placeholder="Descrição (Opcional)" rows="3"></textarea>
             <button type="submit">Salvar Registro</button>
         </form>
@@ -93,7 +93,8 @@
                         
                         <form action="{{ route('produtos.destroy', $produto->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja apagar?');">
                             @csrf
-                            @method('DELETE') <button type="submit" class="btn-delete">Remover</button>
+                            @method('DELETE') 
+                            <button type="submit" class="btn-delete">Remover</button>
                         </form>
                     </div>
                 </div>
